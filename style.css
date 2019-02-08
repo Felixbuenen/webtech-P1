@@ -1,0 +1,33 @@
+* {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+html,
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  height: 100%;
+}
+
+header {
+  text-align: center;
+  background-color: darkkhaki;
+  height: 50%;
+  width: 100%;
+}
+
+aside {
+  float: right;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(119, 116, 71);
+}
+
+nav {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
