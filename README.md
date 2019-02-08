@@ -1,1 +1,1 @@
-# webtech-P1
+# Web Tech - Practical 1
