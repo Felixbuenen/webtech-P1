@@ -1,29 +1,30 @@
-* {
-  margin: 0px !important;
-  padding: 0px !important;
-}
-
-html,
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
-  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #3d3d3d;
+  min-height: 100vh;
 }
 
 header {
-  text-align: center;
-  background-color: darkkhaki;
-  height: 50%;
-  width: 100%;
+  position: relative;
+  background-image: url("../images/header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
 }
 
-aside {
-  float: right;
-  width: 20%;
-  height: 100%;
-  text-align: center;
-  background-color: rgb(119, 116, 71);
+header img {
+  position: absolute;
+  height: 50%;
+
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 nav {
