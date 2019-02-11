@@ -58,15 +58,30 @@ nav li a:hover {
   color: rgba(241, 227, 95, 0.89);
 }
 
+footer {
+  padding: 40px;
+  background-color: black;
+}
+
+footer p {
+  color: #aaaaaa;
+  font-style: italic;
+  font-size: 15px;
+  text-align: center;
+}
+
 section.home-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 15%;
+  padding-right: 15%;
   background-color: rgb(70, 76, 105);
   text-align: center;
-  padding: 0 15%;
 }
 
 section.home-content h2 {
   margin: 0;
-  padding-top: 30px;
+  padding-top: 0px;
   color: white;
   font-size: 40px;
 }
@@ -76,5 +91,16 @@ section.home-content p {
   color: white;
   padding: 20px 0;
   font-size: 15px;
+}
+
+article.book-review {
+ padding-bottom: 40px; 
+}
+
+article.book-review h3 {
+  color: red;
+}
+
+article.book-review q {
   font-style: italic;
 }
