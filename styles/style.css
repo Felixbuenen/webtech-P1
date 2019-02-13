@@ -71,7 +71,7 @@ footer p {
   text-align: center;
 }
 
-.home-content {
+.content {
   padding-top: 70px;
   padding-bottom: 50px;
   padding-left: 20%;
@@ -80,18 +80,19 @@ footer p {
   text-align: center;
 }
 
-.home-content__summary {
+
+.summary {
   margin-bottom: 60px;
 }
 
-.home-content__summary h2 {
+.content h2 {
   margin: 0;
-  padding-top: 0px;
+  padding: 0;
   color: rgba(241, 227, 95, 0.89);
   font-size: 40px;
 }
 
-.home-content__summary p {
+.summary p {
   color: white;
   padding: 20px 0;
   font-size: 15px;
