@@ -127,17 +127,32 @@ footer p {
 }
 
 .fun-fact-table__fact {
-  padding: 10px 40px;
+  padding: 10px 20px;
   text-align: center;
 }
 
 .fun-fact-table__fact h3 {
   color: white;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .fun-fact-table__fact p {
   color: rgb(202, 202, 202);
+  font-size: 15px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+#fun-facts-source {
+  color:white;
   font-style: italic;
-  font-size: 13px;
+  font-size: 12px;
+}
+
+#fun-facts-source {
+  margin: 50px 0px 0px 30px;
+}
+
+#fun-facts-source a {
+  color: white;
 }
