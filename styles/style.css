@@ -110,3 +110,34 @@ footer p {
   font-style: italic;
   color: #dadada;
 }
+
+.fun-fact-table {
+  margin: 40px auto;
+  padding: 0;
+}
+
+.fun-fact-table table {
+  table-layout: fixed;
+  word-break: break-all;
+}
+
+.fun-fact-table th {
+  width: 50%;
+  vertical-align: top;
+}
+
+.fun-fact-table__fact {
+  padding: 10px 40px;
+  text-align: center;
+}
+
+.fun-fact-table__fact h3 {
+  color: white;
+  font-size: 15px;
+}
+
+.fun-fact-table__fact p {
+  color: rgb(202, 202, 202);
+  font-style: italic;
+  font-size: 13px;
+}
