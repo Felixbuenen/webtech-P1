@@ -5,7 +5,7 @@ body {
   margin: auto;
   background-color: #383842;
   min-height: 100vh;
-  width: 80%;
+  width: 65%;
 }
 
 header {
@@ -20,7 +20,8 @@ header {
 header img {
   color: white;
   position: absolute;
-  height: 50%;
+  max-height: 50%;
+  max-width: 50%;
   margin: 0;
   top: 50%;
   left: 50%;
@@ -70,7 +71,7 @@ footer p {
   text-align: center;
 }
 
-section.home-content {
+.home-content {
   padding-top: 70px;
   padding-bottom: 50px;
   padding-left: 20%;
@@ -79,29 +80,32 @@ section.home-content {
   text-align: center;
 }
 
-section.home-content h2 {
+.home-content__summary {
+  margin-bottom: 60px;
+}
+
+.home-content__summary h2 {
   margin: 0;
   padding-top: 0px;
   color: rgba(241, 227, 95, 0.89);
   font-size: 40px;
 }
 
-section.home-content p {
-  margin-bottom: 70px;
+.home-content__summary p {
   color: white;
   padding: 20px 0;
   font-size: 15px;
 }
 
-article.book-review {
+.book-review {
  padding-bottom: 40px; 
 }
 
-article.book-review h3 {
+.book-review h3 {
   color: white;
 }
 
-article.book-review q {
+.book-review q {
   font-style: italic;
   color: #dadada;
 }
