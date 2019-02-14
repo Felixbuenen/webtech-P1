@@ -81,7 +81,7 @@ footer p {
 }
 
 
-.summary {
+.main {
   margin-bottom: 60px;
 }
 
@@ -92,7 +92,7 @@ footer p {
   font-size: 40px;
 }
 
-.summary p {
+.main p {
   color: white;
   padding: 20px 0;
   font-size: 15px;
