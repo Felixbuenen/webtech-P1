@@ -106,13 +106,20 @@ footer p {
 }
 
 .content p {
-  color: white;
+  color: rgb(180, 164, 164);
   padding: 20px 0px;
   font-size: 15px;
   margin: 0;
 }
 
+.main__paragraph {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .film-image {
+  display: inline-block;
   padding: 0;
   margin: 20px 0px 20px 30px;
   border-style: groove;
