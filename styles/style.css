@@ -86,29 +86,36 @@ footer p {
 }
 
 .content h2 {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
   padding: 0;
   color: rgba(241, 227, 95, 0.89);
   font-size: 40px;
 }
 
+.content h3 {
+  font-size: 22px;
+  color: white;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
 .content p {
   color: white;
-  padding: 20px 0;
+  padding: 20px 0px;
   font-size: 15px;
+  margin: 0;
 }
 
 .book-review {
- padding-bottom: 40px; 
-}
-
-.book-review h3 {
-  color: white;
+ padding-bottom: 10px; 
 }
 
 .book-review q {
+  padding: 20px 0px;
   font-style: italic;
   color: #dadada;
+  display: block;
 }
 
 .fun-fact-table {
