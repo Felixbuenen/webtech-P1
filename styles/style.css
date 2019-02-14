@@ -112,6 +112,14 @@ footer p {
   margin: 0;
 }
 
+.film-image {
+  padding: 0;
+  margin: 20px 0px 20px 30px;
+  border-style: groove;
+  border-width: 3px;
+  border-color: white;
+}
+
 .book-review {
  padding-bottom: 10px; 
 }
