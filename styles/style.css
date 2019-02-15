@@ -92,7 +92,7 @@ footer p {
 
 .content h2 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 0;
   color: rgba(241, 227, 95, 0.89);
   font-size: 40px;
@@ -125,6 +125,17 @@ footer p {
   border-style: groove;
   border-width: 3px;
   border-color: white;
+}
+
+.content .source {
+  color:white;
+  font-style: italic;
+  font-size: 14px;
+  margin: 50px 0px 0px 30px;
+}
+
+.content .source a {
+  color: white;
 }
 
 .book-review {
@@ -168,18 +179,4 @@ footer p {
   font-size: 15px;
   font-weight: lighter;
   letter-spacing: 1px;
-}
-
-#fun-facts-source {
-  color:white;
-  font-style: italic;
-  font-size: 12px;
-}
-
-#fun-facts-source {
-  margin: 50px 0px 0px 30px;
-}
-
-#fun-facts-source a {
-  color: white;
 }
