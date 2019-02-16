@@ -75,6 +75,7 @@ footer p {
 }
 
 .content {
+  color: rgb(180, 164, 164);
   position: relative;
   padding-top: 70px;
   padding-bottom: 50px;
@@ -106,7 +107,6 @@ footer p {
 }
 
 .content p {
-  color: rgb(180, 164, 164);
   padding: 20px 0px;
   font-size: 15px;
   margin: 0;
@@ -116,6 +116,12 @@ footer p {
   overflow: hidden;
   margin: 0;
   padding: 0;
+}
+
+.main__paragraph ul {
+  display: inline-block;
+  text-align: left;
+  font-size: 15px;
 }
 
 .film-image {
