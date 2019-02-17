@@ -1,3 +1,5 @@
+/* -------------- GLOBALS -------------- */
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -74,6 +76,8 @@ footer p {
   text-align: center;
 }
 
+/* -------------- MAIN CONTENT -------------- */
+
 .content {
   color: rgb(180, 164, 164);
   font-size: 15px;
@@ -86,7 +90,6 @@ footer p {
   text-align: center;
   backdrop-filter: blur(8px);
 }
-
 
 .main {
   margin-bottom: 30px;
@@ -112,6 +115,17 @@ footer p {
   margin: 0;
 }
 
+.content .source {
+  color:white;
+  font-style: italic;
+  font-size: 14px;
+  margin: 50px 0px 0px 30px;
+}
+
+.content .source a {
+  color: white;
+}
+
 .main__paragraph {
   overflow: hidden;
   margin: 0;
@@ -132,16 +146,7 @@ footer p {
   border-color: white;
 }
 
-.content .source {
-  color:white;
-  font-style: italic;
-  font-size: 14px;
-  margin: 50px 0px 0px 30px;
-}
-
-.content .source a {
-  color: white;
-}
+/* -------------- INDEX CONTENT -------------- */
 
 .book-review {
  padding-bottom: 10px; 
@@ -153,6 +158,8 @@ footer p {
   color: #dadada;
   display: block;
 }
+
+/* -------------- TRIVIA CONTENT -------------- */
 
 .fun-fact-table {
   margin: 40px auto;
