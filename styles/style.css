@@ -186,6 +186,19 @@ footer p {
   font-weight: lighter;
 }
 
+/* -------------- SERIES CONTENT -------------- */
+
+.series-table table {
+    margin: 40px auto;
+    padding: 0;
+    table-layout: fixed;
+    word-break: break-all;
+}
+
+.series-table th {
+    width: 100%;
+    vertical-align: center;
+}
 /* ------------ FILM CONTENT --------- */
 .film-image {
   display: inline-block;
