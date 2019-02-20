@@ -225,6 +225,10 @@ footer p {
     padding-right: 5%;
   }
 
+  .content h2 {
+    font-size: 35px;
+  }
+
   .align-right {
     float: none;
   }
