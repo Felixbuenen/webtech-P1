@@ -141,7 +141,7 @@ footer p {
 }
 
 .align-right {
-  float: right;
+  float: none; /* we only set align right when screen has certain minimum scale */
 }
 
 /* -------------- INDEX CONTENT -------------- */
@@ -232,10 +232,6 @@ footer p {
   .content h1 {
     font-size: 35px;
   }
-
-  .align-right {
-    float: none;
-  }
 }
 
 /* --------- PC/Laptop -------- */
@@ -247,5 +243,9 @@ footer p {
   header img {
     max-height: 60%;
     max-width: 60%;
+  }
+
+  .align-right {
+    float: right;
   }
 }
