@@ -125,6 +125,10 @@ footer p {
   color: white;
 }
 
+.content .source a:hover {
+  color: rgb(180, 164, 164);
+}
+
 .main__paragraph {
   overflow: hidden;
   margin: 0;
