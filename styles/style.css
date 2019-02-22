@@ -192,17 +192,48 @@ footer p {
 
 /* -------------- SERIES CONTENT -------------- */
 
-.series-table table {
+.series-table {
     margin: 40px auto;
     padding: 0;
     table-layout: fixed;
-    word-break: break-all;
-}
-
-.series-table th {
+    word-break: normal;
+    font-weight: normal;
     width: 100%;
     vertical-align: center;
 }
+
+.series-table__illustration {
+    width: 20%;
+    font-weight: normal;
+}
+
+.series-table__name {
+    width: 25%;
+    font-weight: normal;
+}
+
+.series-table__pages {
+    width: 12%;
+    font-weight: normal;
+}
+
+.series-table__date {
+    width: 20%;
+    font-weight: normal;
+}
+
+.series-table__isbn {
+    width: 23%;
+    font-weight: normal;
+}
+
+.series-table__header {
+    color: white;
+    font-weight: bold;
+}
+
+
+
 /* ------------ FILM CONTENT --------- */
 .film-image {
   display: inline-block;
