@@ -196,7 +196,7 @@ footer p {
     margin: 40px auto;
     padding: 0;
     table-layout: fixed;
-    word-break: normal;
+    word-break: break-all;
     font-weight: normal;
     width: 100%;
     vertical-align: center;
@@ -278,5 +278,9 @@ footer p {
 
   .align-right {
     float: right;
+  }
+  
+  .series-table {
+      word-break: normal;
   }
 }
