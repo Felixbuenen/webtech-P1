@@ -162,17 +162,19 @@ footer p {
 
 .fun-fact-table {
   margin: 40px -20px 40px -20px;
+
   padding: 0;
 }
 
-.fun-fact-table table {
-  table-layout: fixed;
-  word-break: break-all;
+.fun-fact-table__col {
+  display: inline-block;
+  width: 50%;
 }
 
-.fun-fact-table th {
-  width: 50%;
-  vertical-align: top;
+.fun-fact-table__row {
+  display: flex;
+  justify-content: center;
+  align-items: top;
 }
 
 .fun-fact-table__fact {
@@ -290,6 +292,15 @@ footer p {
 
   .content h1 {
     font-size: 35px;
+  }
+
+  .fun-fact-table__row {
+    align-content: center;
+    display: inline;
+  }
+
+  .fun-fact-table__col {
+    width: 80%;
   }
 }
 
