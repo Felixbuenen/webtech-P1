@@ -173,7 +173,6 @@ footer p {
 .fun-fact-table__row {
   display: flex;
   justify-content: center;
-  align-items: top;
 }
 
 .fun-fact-table__fact {
@@ -275,8 +274,6 @@ footer p {
 
   nav li a {
     width: 100%;
-    padding-left: auto;
-    padding-right: auto;
   }
 
   nav ul {
