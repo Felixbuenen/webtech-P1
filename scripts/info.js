@@ -45,6 +45,7 @@ class Publisher extends Company {
     }
 }
 
+// setup content data
 let rowling = new Author(new Name("Joanne", "K.", "Rowling"), "https://www.jkrowling.com/", "./images/rowling.jpg");
 let bloomsbury = new Publisher("Bloomsbury Publishing", "Nigel Newton", "England", "London", ["Books", "digital content"], ["Harry Potter", "The Kite Runner"]);
 let hp1Book = new Book("Harry Potter and the Philosopher's Stone", rowling, "223", bloomsbury, "9781408855652");
@@ -56,6 +57,7 @@ window.addEventListener("load", setupInfo, false);
 function setupInfo() {
     let contentNode = document.getElementsByClassName("content")[0];
 
+    // create title
     let header1 = document.createElement("h1");
     let text = document.createTextNode("Info");
     header1.appendChild(text);
