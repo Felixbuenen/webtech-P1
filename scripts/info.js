@@ -124,62 +124,46 @@ function createBookSection(contentNode) {
     authorHeader.appendChild(authorHeaderText);
     contentNode.appendChild(authorHeader);
 
+    let bookRows = [];
+    let bookCols = [];
+
+    // create all table elements
     let bookTable = document.createElement("table");
-    let bookRow1 = document.createElement("tr");
-    let bookCol1 = document.createElement("td");
-    let bookCol2 = document.createElement("td");
-    let bookRow2 = document.createElement("tr");
-    let bookCol3 = document.createElement("td");
-    let bookCol4 = document.createElement("td");
-    let bookRow3 = document.createElement("tr");
-    let bookCol5 = document.createElement("td");
-    let bookCol6 = document.createElement("td");
-    let bookRow4 = document.createElement("tr");
-    let bookCol7 = document.createElement("td");
-    let bookCol8 = document.createElement("td");
-    let bookRow5 = document.createElement("tr");
-    let bookCol9 = document.createElement("td");
-    let bookCol10 = document.createElement("td");
+    for(let i = 0; i < 5; i++) {
+        bookRows.push(document.createElement("tr"));
 
-    let bookCol1Text = document.createTextNode("Name");
-    let bookCol3Text = document.createTextNode("Author");
-    let bookCol5Text = document.createTextNode("Publisher");
-    let bookCol7Text = document.createTextNode("Number of pages");
-    let bookCol9Text = document.createTextNode("ISBN");
+        bookCols.push(document.createElement("td"));
+        bookCols.push(document.createElement("td"));
+    }
 
-    let bookCol2Text = document.createTextNode(hp1Book.name);
-    let bookCol4Text = document.createTextNode(hp1Book.author.name.fullName);
-    let bookCol6Text = document.createTextNode(hp1Book.publisher.name);
-    let bookCol8Text = document.createTextNode(hp1Book.numPages);
-    let bookCol10Text = document.createTextNode(hp1Book.isbn);
+    // create book content object
+    let bookContent = {
+        "Name": hp1Book.name,
+        "Author": hp1Book.author.name.fullName,
+        "Publisher": hp1Book.publisher.name,
+        "Number of pages": hp1Book.numPages,
+        "ISBN": hp1Book.isbn
+    };
 
-    bookCol1.appendChild(bookCol1Text);
-    bookCol2.appendChild(bookCol2Text);
-    bookCol3.appendChild(bookCol3Text);
-    bookCol4.appendChild(bookCol4Text);
-    bookCol5.appendChild(bookCol5Text);
-    bookCol6.appendChild(bookCol6Text);
-    bookCol7.appendChild(bookCol7Text);
-    bookCol8.appendChild(bookCol8Text);
-    bookCol9.appendChild(bookCol9Text);
-    bookCol10.appendChild(bookCol10Text);
+    let bookColTexts = [];
+    // create all text nodes
+    for(let item in bookContent) {
+        bookColTexts.push(document.createTextNode(item));
+        bookColTexts.push(document.createTextNode(bookContent[item]));
+    }
 
-    bookRow1.appendChild(bookCol1);
-    bookRow1.appendChild(bookCol2);
-    bookRow2.appendChild(bookCol3);
-    bookRow2.appendChild(bookCol4);
-    bookRow3.appendChild(bookCol5);
-    bookRow3.appendChild(bookCol6);
-    bookRow4.appendChild(bookCol7);
-    bookRow4.appendChild(bookCol8);
-    bookRow5.appendChild(bookCol9);
-    bookRow5.appendChild(bookCol10);
+    // assign parent-child relationships
+    for(let i = 0; i < bookCols.length; i++) {
+        bookCols[i].appendChild(bookColTexts[i]);
 
-    bookTable.appendChild(bookRow1);
-    bookTable.appendChild(bookRow2);
-    bookTable.appendChild(bookRow3);
-    bookTable.appendChild(bookRow4);
-    bookTable.appendChild(bookRow5);
+        let rowIndex = Math.floor(i / 2);
+        bookRows[rowIndex].appendChild(bookCols[i]);
+    }
+
+    // make rows child of the table
+    for(let i = 0; i < bookRows.length; i++) {
+        bookTable.appendChild(bookRows[i]);
+    }
 
     contentNode.appendChild(bookTable);
 }
@@ -199,30 +183,41 @@ function createAuthorSection(contentNode) {
     contentNode.appendChild(rowlingImage);
 
     let authorTable = document.createElement("table");
-    let authorRow1 = document.createElement("tr");
-    let authorCol1 = document.createElement("td");
-    let authorCol2 = document.createElement("td");
-    let authorRow2 = document.createElement("tr");
-    let authorCol3 = document.createElement("td");
-    let authorCol4 = document.createElement("td");
 
-    let authorCol1Text = document.createTextNode("Name");
-    let authorCol3Text = document.createTextNode("Info");
-    let authorCol2Text = document.createTextNode(rowling.name.fullName);
-    let authorCol4Text = document.createTextNode(rowling.infoLink);
+    // create all table elements
+    let authorCols = [];
+    let authorRows = [];
+    for(let i = 0; i < 2; i++) {
+        authorRows.push(document.createElement("tr"));
 
-    authorCol1.appendChild(authorCol1Text);
-    authorCol2.appendChild(authorCol2Text);
-    authorCol3.appendChild(authorCol3Text);
-    authorCol4.appendChild(authorCol4Text);
+        authorCols.push(document.createElement("td"));
+        authorCols.push(document.createElement("td"));
+    }
 
-    authorRow1.appendChild(authorCol1);
-    authorRow1.appendChild(authorCol2);
-    authorRow2.appendChild(authorCol3);
-    authorRow2.appendChild(authorCol4);
+    // create author content object
+    let authorColTexts = [];
+    let authorContent = {
+        "Name": rowling.name.fullName,
+        "Info": rowling.infoLink
+    };
 
-    authorTable.appendChild(authorRow1);
-    authorTable.appendChild(authorRow2);
+    // create all text nodes
+    for(let item in authorContent) {
+        authorColTexts.push(document.createTextNode(item));
+        authorColTexts.push(document.createTextNode(authorContent[item]));
+    }
+    
+    // assign parent-child relationships
+    for(let i = 0; i < authorCols.length; i++) {
+        authorCols[i].appendChild(authorColTexts[i]);
+
+        let rowIndex = Math.floor(i / 2);
+        authorRows[rowIndex].appendChild(authorCols[i]);
+    }
+
+    // make rows child of table element
+    authorTable.appendChild(authorRows[0]);
+    authorTable.appendChild(authorRows[1]);
 
     contentNode.appendChild(authorTable);
 }
@@ -235,61 +230,45 @@ function createPublisherSection(contentNode) {
     contentNode.appendChild(publisherHeader);
 
     let publisherTable = document.createElement("table");
-    let publisherRow1 = document.createElement("tr");
-    let publisherCol1 = document.createElement("td");
-    let publisherCol2 = document.createElement("td");
-    let publisherRow2 = document.createElement("tr");
-    let publisherCol3 = document.createElement("td");
-    let publisherCol4 = document.createElement("td");
-    let publisherRow3 = document.createElement("tr");
-    let publisherCol5 = document.createElement("td");
-    let publisherCol6 = document.createElement("td");
-    let publisherRow4 = document.createElement("tr");
-    let publisherCol7 = document.createElement("td");
-    let publisherCol8 = document.createElement("td");
-    let publisherRow5 = document.createElement("tr");
-    let publisherCol9 = document.createElement("td");
-    let publisherCol10 = document.createElement("td");
+    
+    // create all table elements
+    let publisherCols = [];
+    let publisherRows = [];
+    for(let i = 0; i < 5; i++) {
+        publisherRows.push(document.createElement("tr"));
+    
+        publisherCols.push(document.createElement("td"));
+        publisherCols.push(document.createElement("td"));
+    }
 
-    let publisherCol1Text = document.createTextNode("Name");
-    let publisherCol3Text = document.createTextNode("CEO");
-    let publisherCol5Text = document.createTextNode("Location");
-    let publisherCol7Text = document.createTextNode("Content type");
-    let publisherCol9Text = document.createTextNode("Famous for");
+    // create publisher content object
+    let publisherColTexts = [];
+    let publisherContent = {
+        "Name": bloomsbury.name,
+        "CEO": bloomsbury.ceo,
+        "Location": bloomsbury.printLocation,
+        "Content type": bloomsbury.printPublicationType,
+        "Famous for": bloomsbury.printFamousFor
+    };
 
-    let publisherCol2Text = document.createTextNode(bloomsbury.name);
-    let publisherCol4Text = document.createTextNode(bloomsbury.ceo);
-    let publisherCol6Text = document.createTextNode(bloomsbury.printLocation);
-    let publisherCol8Text = document.createTextNode(bloomsbury.printPublicationType);
-    let publisherCol10Text = document.createTextNode(bloomsbury.printFamousFor);
+    // create all text nodes
+    for(let item in publisherContent) {
+        publisherColTexts.push(document.createTextNode(item));
+        publisherColTexts.push(document.createTextNode(publisherContent[item]));
+    }
 
-    publisherCol1.appendChild(publisherCol1Text);
-    publisherCol2.appendChild(publisherCol2Text);
-    publisherCol3.appendChild(publisherCol3Text);
-    publisherCol4.appendChild(publisherCol4Text);
-    publisherCol5.appendChild(publisherCol5Text);
-    publisherCol6.appendChild(publisherCol6Text);
-    publisherCol7.appendChild(publisherCol7Text);
-    publisherCol8.appendChild(publisherCol8Text);
-    publisherCol9.appendChild(publisherCol9Text);
-    publisherCol10.appendChild(publisherCol10Text);
+    // assign parent-child relationships
+    for(let i = 0; i < publisherCols.length; i++) {
+        publisherCols[i].appendChild(publisherColTexts[i]);
 
-    publisherRow1.appendChild(publisherCol1);
-    publisherRow1.appendChild(publisherCol2);
-    publisherRow2.appendChild(publisherCol3);
-    publisherRow2.appendChild(publisherCol4);
-    publisherRow3.appendChild(publisherCol5);
-    publisherRow3.appendChild(publisherCol6);
-    publisherRow4.appendChild(publisherCol7);
-    publisherRow4.appendChild(publisherCol8);
-    publisherRow5.appendChild(publisherCol9);
-    publisherRow5.appendChild(publisherCol10);
+        let rowIndex = Math.floor(i / 2);
+        publisherRows[rowIndex].appendChild(publisherCols[i]);
+    }
 
-    publisherTable.appendChild(publisherRow1);
-    publisherTable.appendChild(publisherRow2);
-    publisherTable.appendChild(publisherRow3);
-    publisherTable.appendChild(publisherRow4);
-    publisherTable.appendChild(publisherRow5);
+    // make rows child of the table
+    for(let i = 0; i < publisherRows.length; i++) {
+        publisherTable.appendChild(publisherRows[i]);
+    }
 
     contentNode.appendChild(publisherTable);
 }
