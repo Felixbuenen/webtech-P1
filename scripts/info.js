@@ -94,18 +94,24 @@ function setupInfo() {
     header1.appendChild(headerText);
     contentNode.appendChild(header1);
 
-    // create book image
-    let bookImage = document.createElement("img");
-    bookImage.alt = hp1Book.bookTitle;
-    bookImage.src = hp1Book.imageRef;
-    bookImage.width = 150;
-    contentNode.appendChild(bookImage);
-
+    let titleContainer = document.createElement("article");
+    titleContainer.id = "info-title-container";
     // create book header title
     let bookTitle = document.createElement("h2");
+    bookTitle.id = "info-page-book-title";
     let bookTitleText = document.createTextNode(hp1Book.name);
     bookTitle.appendChild(bookTitleText);
-    contentNode.appendChild(bookTitle);
+
+    // create book image
+    let bookImage = document.createElement("img");
+    bookImage.id = "info-page-img-header";
+    bookImage.alt = hp1Book.name;
+    bookImage.src = hp1Book.imageRef;
+    bookImage.width = 100;
+
+    titleContainer.appendChild(bookTitle);
+    titleContainer.appendChild(bookImage);
+    contentNode.appendChild(titleContainer);
 
     // create book section info
     createBookSection(contentNode);
@@ -118,17 +124,23 @@ function setupInfo() {
 }
 
 function createBookSection(contentNode) {
+    // create article parent
+    let bookArticle = document.createElement("article");
+    bookArticle.className = "info-article";
+
     // create book header section
     let authorHeader = document.createElement("h3");
     let authorHeaderText = document.createTextNode("Book");
     authorHeader.appendChild(authorHeaderText);
-    contentNode.appendChild(authorHeader);
+    bookArticle.appendChild(authorHeader);
 
     let bookRows = [];
     let bookCols = [];
 
     // create all table elements
     let bookTable = document.createElement("table");
+    bookTable.className = "info-table";
+
     for(let i = 0; i < 5; i++) {
         bookRows.push(document.createElement("tr"));
 
@@ -158,6 +170,9 @@ function createBookSection(contentNode) {
 
         let rowIndex = Math.floor(i / 2);
         bookRows[rowIndex].appendChild(bookCols[i]);
+
+        // assign css class
+        i % 2 === 0 ? bookCols[i].className = "info-table-title" : bookCols[i].className = "info-table-value";
     }
 
     // make rows child of the table
@@ -165,24 +180,30 @@ function createBookSection(contentNode) {
         bookTable.appendChild(bookRows[i]);
     }
 
-    contentNode.appendChild(bookTable);
+    bookArticle.appendChild(bookTable);
+    contentNode.appendChild(bookArticle);
 }
 
 function createAuthorSection(contentNode) {
+    // create article parent
+    let authorArticle = document.createElement("article");
+    authorArticle.className = "info-article";
+
     // create author header section
     let authorHeader = document.createElement("h3");
     let authorHeaderText = document.createTextNode("Author");
     authorHeader.appendChild(authorHeaderText);
-    contentNode.appendChild(authorHeader);
+    authorArticle.appendChild(authorHeader);
 
     // create author image
     let rowlingImage = document.createElement("img");
     rowlingImage.alt = rowling.name.fullName;
     rowlingImage.src = rowling.imageRef;
     rowlingImage.width = 150;
-    contentNode.appendChild(rowlingImage);
+    authorArticle.appendChild(rowlingImage);
 
     let authorTable = document.createElement("table");
+    authorTable.className = "info-table";
 
     // create all table elements
     let authorCols = [];
@@ -213,23 +234,32 @@ function createAuthorSection(contentNode) {
 
         let rowIndex = Math.floor(i / 2);
         authorRows[rowIndex].appendChild(authorCols[i]);
+
+        // assign css class
+        i % 2 === 0 ? authorCols[i].className = "info-table-title" : authorCols[i].className = "info-table-value";
     }
 
     // make rows child of table element
     authorTable.appendChild(authorRows[0]);
     authorTable.appendChild(authorRows[1]);
 
-    contentNode.appendChild(authorTable);
+    authorArticle.appendChild(authorTable);
+    contentNode.appendChild(authorArticle);
 }
 
 function createPublisherSection(contentNode) {
+    // create article parent
+    let publisherArticle = document.createElement("article");
+    publisherArticle.className = "info-article";
+
     // create author header section
     let publisherHeader = document.createElement("h3");
     let publisherHeaderText = document.createTextNode("Publisher");
     publisherHeader.appendChild(publisherHeaderText);
-    contentNode.appendChild(publisherHeader);
+    publisherArticle.appendChild(publisherHeader);
 
     let publisherTable = document.createElement("table");
+    publisherTable.className = "info-table";
     
     // create all table elements
     let publisherCols = [];
@@ -263,6 +293,9 @@ function createPublisherSection(contentNode) {
 
         let rowIndex = Math.floor(i / 2);
         publisherRows[rowIndex].appendChild(publisherCols[i]);
+
+        // assign css class
+        i % 2 === 0 ? publisherCols[i].className = "info-table-title" : publisherCols[i].className = "info-table-value";
     }
 
     // make rows child of the table
@@ -270,5 +303,6 @@ function createPublisherSection(contentNode) {
         publisherTable.appendChild(publisherRows[i]);
     }
 
-    contentNode.appendChild(publisherTable);
+    publisherArticle.appendChild(publisherTable);
+    contentNode.appendChild(publisherArticle);
 }

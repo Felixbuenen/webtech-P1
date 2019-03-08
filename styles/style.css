@@ -110,6 +110,10 @@ footer p {
   margin-bottom: 0;
 }
 
+.content h3 {
+  color: white;
+}
+
 .content p {
   padding: 20px 0px;
   margin: 0;
@@ -128,6 +132,11 @@ footer p {
 
 .content .source a:hover {
   color: rgb(180, 164, 164);
+}
+
+.content img {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .main__paragraph {
@@ -255,6 +264,52 @@ footer p {
   border-color: white;
 }
 
+/* ------------ INFO CONTENT --------- */
+.info-article {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  align-content: center;
+}
+
+.info-table {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
+
+.info-table tr td {
+  padding: 5px 0px;
+  vertical-align: top;
+}
+
+.info-table-title {
+  width: 30%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.info-table-value {
+  width: 70%;
+  text-align: right;
+}
+
+#info-title-container h2 {
+  margin-right: 10px;
+}
+
+#info-page-img-header {
+  margin-top: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#info-page-book-title {
+  width: 70%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
 /* --------- MOBILE -------- */
 @media only screen and (max-width: 600px) {
   body {
@@ -330,5 +385,15 @@ footer p {
   
   .series-table {
       word-break: normal;
+  }
+
+  .info-table {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+  }
+
+  #info-page-img-header {
+    width: 30%;
   }
 }
