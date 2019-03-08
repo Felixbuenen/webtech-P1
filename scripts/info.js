@@ -121,7 +121,35 @@ function setupInfo() {
 
     // create publisher section info
     createPublisherSection(contentNode);
+    
+    let elementSelectorMenu = document.getElementById("elementSelectorMenu");
+    elementSelectorMenu.addEventListener('change', function(){ menuSelectionChange(); });
 }
+
+function menuSelectionChange() {
+    let elementSelectorMenu = document.getElementById("elementSelectorMenu");
+    document.getElementById("selected-element").innerHTML = "The selected element is " + elementSelectorMenu.value + ".";
+    
+    let modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    
+    let span = document.getElementsByClassName("close-modal")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 function createBookSection(contentNode) {
     // create article parent
