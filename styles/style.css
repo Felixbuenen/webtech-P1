@@ -38,6 +38,21 @@
   cursor: pointer;
 }
 
+#element-styling-section {
+  font-size: 14px;
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  right: 30%;
+  text-align: center;
+}
+
+#element-form {
+  margin-top: 10px;
+}
+
 /* Einde W3Schools copypasta */
 
 

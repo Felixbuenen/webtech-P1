@@ -18,30 +18,25 @@
         src="./images/logo.png"
         alt="Harry Potter and the Philosopher's Stone"
       /></a>
-      
-      
-      <form>
-        <select id="elementSelectionMenu"></select>
-      </form>
-    
+  
       <div id="menuModal" class="modal">
-        <!-- Modal content -->
         <div class="modal-content">
           <span class="close-modal">&times;</span> <!-- button to close window -->
-          <!-- HIER MOET EEN MENU KOMEN GECONDOLEERD ALVAST-->
-          
           <form id="menu-two">
             Font size:<br><input type="number" id="change-font-size"><br>
             Color:<br><input type="color" id="change-color"> <br><br>
             <button type="button" id="apply-button" onclick="menuApplyNewSettings(); false;"> Apply </button>
           </form>
-          
-          <!-- DEBUG STUFF: --> <p id="selected-element"></p>
-          <!-- DEBUG STUFF: --> <p id="selected-element-ii"></p>
         </div>
       </div>
       
-      
+      <article id="element-styling-section">
+        <em>Apply styling</em>
+        <form id="element-form">
+            <select id="elementSelectionMenu"></select>
+        </form>
+      </article>
+
     </header>
     <nav>
       <ul>
