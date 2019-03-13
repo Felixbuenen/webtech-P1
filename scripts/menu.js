@@ -6,7 +6,7 @@ function setupInfo() {
     createSelectionMenu();
     
     let elementSelectionMenu = document.getElementById("elementSelectionMenu");
-    elementSelectionMenu.addEventListener('change', function(){ selectionMenuChange(); });
+    elementSelectionMenu.addEventListener("change", function(){ selectionMenuChange(); });
 }
 
 function createSelectionMenu() {
@@ -60,7 +60,7 @@ function selectionMenuChange() {
     document.getElementById("selected-element").innerHTML = "The selected element is " + elementSelectionMenu.value + ".";
     
     
-    let modal = document.getElementById("myModal");
+    let modal = document.getElementById("menuModal");
     modal.style.display = "block";
     
     let span = document.getElementsByClassName("close-modal")[0];
@@ -71,20 +71,25 @@ function selectionMenuChange() {
 
 function menuApplyNewSettings() {
     // target tag
-    let target = document.getElementById("elementSelectionMenu").value;
+    let target = document.getElementById("elementSelectionMenu").value; // this is the tag that is selected in the previous menu
     
     // values of input by user in the form (numerical values only)
-    let newFontValue = document.getElementById("change-font-size").value;
-    let newColorValue = document.getElementById("change-color").value;
-    document.getElementById("selected-element").innerHTML = target + "   " + newFontValue + "   " + newColorValue;
+    let newFontValue = document.getElementById("change-font-size").value; // this is the input value of the font  option in the previous menu
+    let newColorValue = document.getElementById("change-color").value;    // this is the input value of the color option in the previous menu
+    /* DEBUG STUFF: */ document.getElementById("selected-element").innerHTML = target + "   " + newFontValue + "   " + newColorValue;
     
-    /* THE CODE BELOW DOES NOT WORK!!
-    
-    // apply changes in CSS
-    if(target !== undefined && newFontValue !== undefined) {
-        document.getElementsByTagName(target).style.font-size = newFontValue;
-        document.getElementById("selected-element").innerHTML = "Changed font of " + target + " to " + newFontValue;
+    if(newFontValue != "") {
+        // apply new font value to target
+        document.getElementById(target).style.fontSize = newFontValue; // THIS DOES NOT WORK YET :(
+        /* DEBUG STUFF: */ document.getElementById("selected-element-ii").innerHTML = "newFontValue is not empty.";
     }
-    */
+    else {
+        /* DEBUG STUFF: */ document.getElementById("selected-element-ii").innerHTML = "newFontValue is empty.";
+    }
     
+    // TODO: apply new color value to target
+    
+    // close modal
+    let modal = document.getElementById("menuModal");
+    modal.style.display = "none";
 }

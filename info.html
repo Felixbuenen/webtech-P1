@@ -24,7 +24,7 @@
         <select id="elementSelectionMenu" onchange="change"></select>
       </form>
     
-      <div id="myModal" class="modal">
+      <div id="menuModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close-modal">&times;</span> <!-- button to close window -->
@@ -32,11 +32,12 @@
           
           <form id="menu-two">
             Font size:<br><input type="number" id="change-font-size"><br>
-            Color:<br><input type="number" id="change-color"> (RGB value, for example 255255255) <br><br>
+            Color:<br><input type="color" id="change-color"> <br><br>
             <input type="button" onclick="menuApplyNewSettings()" value="Apply">
           </form>
           
-          <p id="selected-element"></p>
+          <!-- DEBUG STUFF: --> <p id="selected-element"></p>
+          <!-- DEBUG STUFF: --> <p id="selected-element-ii"></p>
         </div>
       </div>
       
