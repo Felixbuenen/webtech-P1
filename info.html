@@ -21,7 +21,7 @@
       
       
       <form>
-        <select id="elementSelectionMenu" onchange="change"></select>
+        <select id="elementSelectionMenu"></select>
       </form>
     
       <div id="menuModal" class="modal">
@@ -33,7 +33,7 @@
           <form id="menu-two">
             Font size:<br><input type="number" id="change-font-size"><br>
             Color:<br><input type="color" id="change-color"> <br><br>
-            <input type="button" onclick="menuApplyNewSettings()" value="Apply">
+            <button type="button" id="apply-button" onclick="menuApplyNewSettings(); false;"> Apply </button>
           </form>
           
           <!-- DEBUG STUFF: --> <p id="selected-element"></p>

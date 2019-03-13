@@ -6,62 +6,63 @@ function setupInfo() {
     createSelectionMenu();
     
     let elementSelectionMenu = document.getElementById("elementSelectionMenu");
-    elementSelectionMenu.addEventListener("change", function(){ selectionMenuChange(); });
+    elementSelectionMenu.addEventListener("change", selectionMenuChange, false);
 }
 
 function createSelectionMenu() {
     let elementSelectionMenu = document.getElementById("elementSelectionMenu");
     
-    // search document for <body> and add to menu
-    if(document.getElementsByTagName("body").length > 0) {
+    // search document for <p> and add to menu
+    if(document.getElementsByTagName("p").length > 0) {
         let addBody = document.createElement("option");
-        addBody.text = "body";
+        addBody.text = "p";
         elementSelectionMenu.add(addBody);
     }
     
-    // search document for <header> and add to menu
-    if(document.getElementsByTagName("header").length > 0) {
+    // search document for <a> and add to menu
+    if(document.getElementsByTagName("a").length > 0) {
         let addHeader = document.createElement("option");
-        addHeader.text = "header";
+        addHeader.text = "a";
         elementSelectionMenu.add(addHeader);
     }
     
-    // search document for <footer> and add to menu
-    if(document.getElementsByTagName("footer").length > 0) {
+    // search document for <h1> and add to menu
+    if(document.getElementsByTagName("h1").length > 0) {
         let addFooter = document.createElement("option");
-        addFooter.text = "footer";
+        addFooter.text = "h1";
         elementSelectionMenu.add(addFooter);
     }
         
-    // search document for <aside> and add to menu
-    if(document.getElementsByTagName("aside").length > 0) {
+    // search document for <h2> and add to menu
+    if(document.getElementsByTagName("h2").length > 0) {
         let addAside = document.createElement("option");
-        addAside.text = "aside";
+        addAside.text = "h2";
         elementSelectionMenu.add(addAside);
     }
     
-    // search document for <article> and add to menu
-    if(document.getElementsByTagName("article").length > 0) {
+    // search document for <h3> and add to menu
+    if(document.getElementsByTagName("h3").length > 0) {
         let addArticle = document.createElement("option");
-        addArticle.text = "article";
+        addArticle.text = "h3";
         elementSelectionMenu.add(addArticle);
     }
-    
-    // search document for <section> and add to menu
-    if(document.getElementsByTagName("section").length > 0) {
-        let addSection = document.createElement("option");
-        addSection.text = "section";
-        elementSelectionMenu.add(addSection);
+
+    // search document for <td> and add to menu
+    if(document.getElementsByTagName("td").length > 0) {
+        let addArticle = document.createElement("option");
+        addArticle.text = "td";
+        elementSelectionMenu.add(addArticle);
     }
 }
 
 function selectionMenuChange() {
-    let elementSelectionMenu = document.getElementById("elementSelectionMenu");
-    document.getElementById("selected-element").innerHTML = "The selected element is " + elementSelectionMenu.value + ".";
-    
     
     let modal = document.getElementById("menuModal");
     modal.style.display = "block";
+
+    // add 'apply' event handler
+    let applyButton = document.getElementById("apply-button");
+    //applyButton.addEventListener("onclick", menuApplyNewSettings, false);
     
     let span = document.getElementsByClassName("close-modal")[0];
     span.onclick = function() {
@@ -76,15 +77,25 @@ function menuApplyNewSettings() {
     // values of input by user in the form (numerical values only)
     let newFontValue = document.getElementById("change-font-size").value; // this is the input value of the font  option in the previous menu
     let newColorValue = document.getElementById("change-color").value;    // this is the input value of the color option in the previous menu
-    /* DEBUG STUFF: */ document.getElementById("selected-element").innerHTML = target + "   " + newFontValue + "   " + newColorValue;
+    /* DEBUG STUFF: */ //document.getElementById("selected-element").innerHTML = target + "   " + newFontValue + "   " + newColorValue;
     
     if(newFontValue != "") {
         // apply new font value to target
-        document.getElementById(target).style.fontSize = newFontValue; // THIS DOES NOT WORK YET :(
-        /* DEBUG STUFF: */ document.getElementById("selected-element-ii").innerHTML = "newFontValue is not empty.";
+        //document.getElementById(target).style.fontSize = newFontValue; // THIS DOES NOT WORK YET :(
+        /* DEBUG STUFF: */ //document.getElementById("selected-element-ii").innerHTML = "newFontValue is not empty.";
     }
     else {
-        /* DEBUG STUFF: */ document.getElementById("selected-element-ii").innerHTML = "newFontValue is empty.";
+        alert("You need to specify a font value!");
+        return;
+    }
+
+    let targetElements = document.getElementsByTagName(target);
+    //alert(targetElements.length);
+    for(let i = 0; i < targetElements.length; i++) {
+        //e.style.color = newColorValue;
+        //e.style.font = newFontValue;
+        targetElements[i].style.setProperty("font-size", newFontValue + "px", "important");
+        targetElements[i].style.setProperty("color", newColorValue, "important");
     }
     
     // TODO: apply new color value to target
