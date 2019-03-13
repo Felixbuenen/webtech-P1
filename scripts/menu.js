@@ -62,8 +62,8 @@ function selectionMenuChange() {
 
     // add 'apply' event handler
     let applyButton = document.getElementById("apply-button");
-    //applyButton.addEventListener("onclick", menuApplyNewSettings, false);
-    
+    applyButton.addEventListener("click", menuApplyNewSettings, false);
+
     let span = document.getElementsByClassName("close-modal")[0];
     span.onclick = function() {
         modal.style.display = "none";
@@ -77,29 +77,19 @@ function menuApplyNewSettings() {
     // values of input by user in the form (numerical values only)
     let newFontValue = document.getElementById("change-font-size").value; // this is the input value of the font  option in the previous menu
     let newColorValue = document.getElementById("change-color").value;    // this is the input value of the color option in the previous menu
-    /* DEBUG STUFF: */ //document.getElementById("selected-element").innerHTML = target + "   " + newFontValue + "   " + newColorValue;
-    
-    if(newFontValue != "") {
-        // apply new font value to target
-        //document.getElementById(target).style.fontSize = newFontValue; // THIS DOES NOT WORK YET :(
-        /* DEBUG STUFF: */ //document.getElementById("selected-element-ii").innerHTML = "newFontValue is not empty.";
-    }
-    else {
+
+    if(newFontValue == "") {
         alert("You need to specify a font value!");
         return;
     }
 
+    // loop through elements, apply style change
     let targetElements = document.getElementsByTagName(target);
-    //alert(targetElements.length);
     for(let i = 0; i < targetElements.length; i++) {
-        //e.style.color = newColorValue;
-        //e.style.font = newFontValue;
         targetElements[i].style.setProperty("font-size", newFontValue + "px", "important");
         targetElements[i].style.setProperty("color", newColorValue, "important");
     }
-    
-    // TODO: apply new color value to target
-    
+        
     // close modal
     let modal = document.getElementById("menuModal");
     modal.style.display = "none";
