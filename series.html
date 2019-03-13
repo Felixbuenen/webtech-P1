@@ -3,38 +3,46 @@
   <head>
     <title>Harry Potter and the Philosopher's Stone | Series</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Harry Potter and the Philosopher's Stone was only the beginning of a series of classics. Read
-                                      more about what more came after this debut."/>
-    <meta name="keywords" content="Harry Potter, Philosopher's Stone, Sorcerer's Stone, book, J.K. Rowling, Hermoine, Ron, Voldemort" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta
+      name="description"
+      content="Harry Potter and the Philosopher's Stone was only the beginning of a series of classics. Read
+                                      more about what more came after this debut."
+    />
+    <meta
+      name="keywords"
+      content="Harry Potter, Philosopher's Stone, Sorcerer's Stone, book, J.K. Rowling, Hermoine, Ron, Voldemort"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <link rel="icon" type="image/png" href="./images/icon.png" />
+    <script type="text/javascript" src="./scripts/menu.js"></script>
   </head>
   <body>
     <header>
-      <a href="./index.html"><img
-        src="./images/logo.png"
-        alt="Harry Potter and the Philosopher's Stone"
+      <a href="./index.html"
+        ><img
+          src="./images/logo.png"
+          alt="Harry Potter and the Philosopher's Stone"
       /></a>
 
       <div id="menuModal" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span> <!-- button to close window -->
-            <form id="menu-two">
-              Font size:<br><input type="number" id="change-font-size"><br>
-              Color:<br><input type="color" id="change-color"> <br><br>
-              <button type="button" id="apply-button"> Apply </button>
-            </form>
-          </div>
-        </div>
-        
-        <article id="element-styling-section">
-          <em>Apply styling</em>
-          <form id="element-form">
-              <select id="elementSelectionMenu"></select>
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <!-- button to close window -->
+          <form id="menu-two">
+            Font size:<br /><input type="number" id="change-font-size" /><br />
+            Color:<br /><input type="color" id="change-color" /> <br /><br />
+            <button type="button" id="apply-button">Apply</button>
           </form>
-        </article>
+        </div>
+      </div>
 
+      <article id="element-styling-section">
+        <em>Apply styling</em>
+        <form id="element-form">
+          <select id="elementSelectionMenu"></select>
+        </form>
+      </article>
     </header>
     <nav>
       <ul>
@@ -46,185 +54,194 @@
         <li><a href="./info.html">Info</a></li>
       </ul>
     </nav>
-    
-    <section class="content">
 
+    <section class="content">
       <h1>The magic continues</h1>
 
       <table class="series-table">
         <thead>
           <tr>
             <th class="series-table__header series-table__illustration">
-              <p> Cover </p>
+              <p>Cover</p>
             </th>
             <th class=" series-table__header series-table__name">
-              <p> Name </p>
+              <p>Name</p>
             </th>
             <th class="series-table__header series-table__pages">
-              <p> Pages </p>
+              <p>Pages</p>
             </th>
             <th class="series-table__header series-table__date">
-              <p> Release date </p>
+              <p>Release date</p>
             </th>
             <th class="series-table__header series-table__isbn">
-              <p> ISBN </p>
+              <p>ISBN</p>
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr> <!-- The Philosopher's Stone -->
+          <tr>
+            <!-- The Philosopher's Stone -->
             <th class="series-table__illustration">
               <img
                 src="./images/bookcover_stone.jpg"
                 alt="Cover art of Harry Potter and the Philosopher's Stone"
-                width=80
+                width="80"
               />
             </th>
             <th class="series-table__name">
-              <p> The Philosopher's Stone </p>
+              <p>The Philosopher's Stone</p>
             </th>
             <th class="series-table__pages">
-              <p> 223 </p>
+              <p>223</p>
             </th>
             <th class="series-table__date">
-              <p> 26 June 1997 </p>
+              <p>26 June 1997</p>
             </th>
             <th class="series-table__isbn">
-              <p> 0-7475-3269-9 </p>
+              <p>0-7475-3269-9</p>
             </th>
           </tr>
-          <tr> <!-- The Chamber of Secrets -->
+          <tr>
+            <!-- The Chamber of Secrets -->
             <th class="series-table__illustration">
               <img
                 src="./images/bookcover_secrets.jpg"
                 alt="Cover art of Harry Potter and the Chamber of Secrets"
-                width=80
+                width="80"
               />
             </th>
             <th class="series-table__name">
-              <p> The Chamber of Secrets </p>
+              <p>The Chamber of Secrets</p>
             </th>
             <th class="series-table__pages">
-              <p> 251 </p>
+              <p>251</p>
             </th>
             <th class="series-table__date">
-              <p> 2 July 1998 </p>
+              <p>2 July 1998</p>
             </th>
             <th class="series-table__isbn">
-              <p> 0-7475-3849-2 </p>
+              <p>0-7475-3849-2</p>
             </th>
           </tr>
-          <tr> <!-- The Prisoner of Azkaban -->
+          <tr>
+            <!-- The Prisoner of Azkaban -->
             <th class="series-table__illustration">
               <img
                 src="./images/bookcover_azkaban.jpg"
                 alt="Cover art of Harry Potter and the Prisoner of Azkaban"
-                width=80
+                width="80"
               />
             </th>
             <th class="series-table__name">
-              <p> The Prisoner of Azkaban </p>
+              <p>The Prisoner of Azkaban</p>
             </th>
             <th class="series-table__pages">
-              <p> 317 </p>
+              <p>317</p>
             </th>
             <th class="series-table__date">
-              <p> 8 July 1999 </p>
+              <p>8 July 1999</p>
             </th>
             <th class="series-table__isbn">
-              <p> 0-7475-4215-5 </p>
+              <p>0-7475-4215-5</p>
             </th>
           </tr>
-          <tr> <!-- The Goblet of Fire -->
+          <tr>
+            <!-- The Goblet of Fire -->
             <th class="series-table__illustration">
               <img
                 src="./images/bookcover_fire.jpg"
                 alt="Cover art of Harry Potter and the Goblet of Fire"
-                width=80
+                width="80"
               />
             </th>
             <th class="series-table__name">
-              <p> The Goblet of Fire </p>
+              <p>The Goblet of Fire</p>
             </th>
             <th class="series-table__pages">
-              <p> 636 </p>
+              <p>636</p>
             </th>
             <th class="series-table__date">
-              <p> 8 July 2000 </p>
+              <p>8 July 2000</p>
             </th>
             <th class="series-table__isbn">
-              <p> 0-7475-4624-X </p>
+              <p>0-7475-4624-X</p>
             </th>
           </tr>
-          <tr> <!-- The Order of the Phoenix -->
+          <tr>
+            <!-- The Order of the Phoenix -->
             <th class="series-table__illustration">
               <img
                 src="./images/bookcover_phoenix.jpg"
                 alt="Cover art of Harry Potter and the Order of the Phoenix"
-                width=80
+                width="80"
               />
             </th>
             <th class="series-table__name">
-              <p> The Order of the Phoenix </p>
+              <p>The Order of the Phoenix</p>
             </th>
             <th class="series-table__pages">
-              <p> 766 </p>
+              <p>766</p>
             </th>
             <th class="series-table__date">
-              <p> 21 June 2003 </p>
+              <p>21 June 2003</p>
             </th>
             <th class="series-table__isbn">
-              <p> 0-7475-5100-6 </p>
+              <p>0-7475-5100-6</p>
             </th>
           </tr>
-          <tr> <!-- The Half-Blood Prince -->
+          <tr>
+            <!-- The Half-Blood Prince -->
             <th class="series-table__illustration">
               <img
                 src="./images/bookcover_prince.jpg"
                 alt="Cover art of Harry Potter and the Half-Blood Prince"
-                width=80
+                width="80"
               />
             </th>
             <th class="series-table__name">
-              <p> The Half-Blood Prince </p>
+              <p>The Half-Blood Prince</p>
             </th>
             <th class="series-table__pages">
-              <p> 607 </p>
+              <p>607</p>
             </th>
             <th class="series-table__date">
-              <p> 16 July 2005 </p>
+              <p>16 July 2005</p>
             </th>
             <th class="series-table__isbn">
-              <p> 0-7475-8108-8 </p>
+              <p>0-7475-8108-8</p>
             </th>
           </tr>
-          <tr> <!-- The Deathly Hallows -->
+          <tr>
+            <!-- The Deathly Hallows -->
             <th class="series-table__illustration">
               <img
                 src="./images/bookcover_hallows.jpg"
                 alt="Cover art of Harry Potter and the Deathly Hallows"
-                width=80
+                width="80"
               />
             </th>
             <th class="series-table__name">
-              <p> The Deathly Hallows </p>
+              <p>The Deathly Hallows</p>
             </th>
             <th class="series-table__pages">
-              <p> 607 </p>
+              <p>607</p>
             </th>
             <th class="series-table__date">
-              <p> 21 July 2007 </p>
+              <p>21 July 2007</p>
             </th>
             <th class="series-table__isbn">
-              <p> 0-545-01022-5 </p>
+              <p>0-545-01022-5</p>
             </th>
           </tr>
         </tbody>
       </table>
     </section>
-    
+
     <footer>
-      <p>&copy; J.K. Rowling. Harry Potter and the Philosopher's Stone. London: Bloomsbury Publishing, 1997.</p>
+      <p>
+        &copy; J.K. Rowling. Harry Potter and the Philosopher's Stone. London:
+        Bloomsbury Publishing, 1997.
+      </p>
     </footer>
   </body>
 </html>

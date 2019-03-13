@@ -3,38 +3,46 @@
   <head>
     <title>Harry Potter and the Philosopher's Stone | Trivia</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Did you know that J.K. Rowling was actually rejected many times before she was finally accepted?
-                                      Read more interesting facts here."/>
-    <meta name="keywords" content="Harry Potter, Philosopher's Stone, Sorcerer's Stone, book, J.K. Rowling, Hermoine, Ron, Voldemort" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta
+      name="description"
+      content="Did you know that J.K. Rowling was actually rejected many times before she was finally accepted?
+                                      Read more interesting facts here."
+    />
+    <meta
+      name="keywords"
+      content="Harry Potter, Philosopher's Stone, Sorcerer's Stone, book, J.K. Rowling, Hermoine, Ron, Voldemort"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <link rel="icon" type="image/png" href="./images/icon.png" />
+    <script type="text/javascript" src="./scripts/menu.js"></script>
   </head>
   <body>
     <header>
-      <a href="./index.html"><img
-        src="./images/logo.png"
-        alt="Harry Potter and the Philosopher's Stone"
+      <a href="./index.html"
+        ><img
+          src="./images/logo.png"
+          alt="Harry Potter and the Philosopher's Stone"
       /></a>
 
       <div id="menuModal" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span> <!-- button to close window -->
-            <form id="menu-two">
-              Font size:<br><input type="number" id="change-font-size"><br>
-              Color:<br><input type="color" id="change-color"> <br><br>
-              <button type="button" id="apply-button"> Apply </button>
-            </form>
-          </div>
-        </div>
-        
-        <article id="element-styling-section">
-          <em>Apply styling</em>
-          <form id="element-form">
-              <select id="elementSelectionMenu"></select>
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <!-- button to close window -->
+          <form id="menu-two">
+            Font size:<br /><input type="number" id="change-font-size" /><br />
+            Color:<br /><input type="color" id="change-color" /> <br /><br />
+            <button type="button" id="apply-button">Apply</button>
           </form>
-        </article>
+        </div>
+      </div>
 
+      <article id="element-styling-section">
+        <em>Apply styling</em>
+        <form id="element-form">
+          <select id="elementSelectionMenu"></select>
+        </form>
+      </article>
     </header>
     <nav>
       <ul>
@@ -46,62 +54,93 @@
         <li><a href="./info.html">Info</a></li>
       </ul>
     </nav>
-    
+
     <section class="content">
-      
       <h1>Did you know?</h1>
 
       <div class="fun-fact-table">
-          <div class="fun-fact-table__row">
-            <div class="fun-fact-table__col">
-              <article class="fun-fact-table__fact">
-                <h2>Rejected</h2>
-                <p>J.K. Rowling received 12 rejection letters before <em>The Philosopher's Stone</em> was finally accepted for publication.</p>
-              </article>
-            </div>
-            <div class="fun-fact-table__col">
-              <article class="fun-fact-table__fact">
-                <h2>Alice</h2>
-                <p>The book's hopes of publication were rescued by an 8-year-old girl called Alice, the daughter of the chief executive of Bloomsbury, who was given the first chapter to read and demanded to read the rest.</p>
-              </article>
-            </div>
+        <div class="fun-fact-table__row">
+          <div class="fun-fact-table__col">
+            <article class="fun-fact-table__fact">
+              <h2>Rejected</h2>
+              <p>
+                J.K. Rowling received 12 rejection letters before
+                <em>The Philosopher's Stone</em> was finally accepted for
+                publication.
+              </p>
+            </article>
           </div>
-          <div class="fun-fact-table__row">
-            <div class="fun-fact-table__col">
-              <article class="fun-fact-table__fact">
-                <h2>Gender Neutral</h2>
-                <p>The book was published under the name 'J. K. Rowling' in order to keep the author's gender ambiguous.</p>
-              </article>
-            </div>
-            <div class="fun-fact-table__col">
-              <article class="fun-fact-table__fact">
-                <h2>Manchester</h2>
-                <p> J. K. Rowling came up with the idea of a 'scrawny little black-haired bespectacled boy' who becomes a wizard whilst on a train journey from Manchester to London.</p>
-              </article>
-            </div>
-          </div>
-          <div class="fun-fact-table__row">
-            <div class="fun-fact-table__col">
-              <article class="fun-fact-table__fact">
-                <h2>First Review</h2>
-                <p>In what is thought to be the first published review of the book, Lindsey Fraser of The Scotsman deemed it 'a hugely entertaining thriller' and J. K. Rowling 'a first-rate writer for children'.</p>
-              </article>
-            </div>
-            <div class="fun-fact-table__col">
-              <article class="fun-fact-table__fact">
-                <h2>Philo... what?</h2>
-                <p>The book's name was changed to <em>Harry Potter and the Sorcerer's Stone</em> in America because the American publishers believed that children wouldn't want to read a book with the word 'philosopher' in the title.</p>
-              </article>
-            </div>
+          <div class="fun-fact-table__col">
+            <article class="fun-fact-table__fact">
+              <h2>Alice</h2>
+              <p>
+                The book's hopes of publication were rescued by an 8-year-old
+                girl called Alice, the daughter of the chief executive of
+                Bloomsbury, who was given the first chapter to read and demanded
+                to read the rest.
+              </p>
+            </article>
           </div>
         </div>
-    
-    <p class="source">Source: The Book People Ltd, <a href="https://bit.ly/2E81VxS">"10 Magical Facts About Harry Potter and the Philosopher's Stone"</a></p>
+        <div class="fun-fact-table__row">
+          <div class="fun-fact-table__col">
+            <article class="fun-fact-table__fact">
+              <h2>Gender Neutral</h2>
+              <p>
+                The book was published under the name 'J. K. Rowling' in order
+                to keep the author's gender ambiguous.
+              </p>
+            </article>
+          </div>
+          <div class="fun-fact-table__col">
+            <article class="fun-fact-table__fact">
+              <h2>Manchester</h2>
+              <p>
+                J. K. Rowling came up with the idea of a 'scrawny little
+                black-haired bespectacled boy' who becomes a wizard whilst on a
+                train journey from Manchester to London.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="fun-fact-table__row">
+          <div class="fun-fact-table__col">
+            <article class="fun-fact-table__fact">
+              <h2>First Review</h2>
+              <p>
+                In what is thought to be the first published review of the book,
+                Lindsey Fraser of The Scotsman deemed it 'a hugely entertaining
+                thriller' and J. K. Rowling 'a first-rate writer for children'.
+              </p>
+            </article>
+          </div>
+          <div class="fun-fact-table__col">
+            <article class="fun-fact-table__fact">
+              <h2>Philo... what?</h2>
+              <p>
+                The book's name was changed to
+                <em>Harry Potter and the Sorcerer's Stone</em> in America
+                because the American publishers believed that children wouldn't
+                want to read a book with the word 'philosopher' in the title.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
 
+      <p class="source">
+        Source: The Book People Ltd,
+        <a href="https://bit.ly/2E81VxS"
+          >"10 Magical Facts About Harry Potter and the Philosopher's Stone"</a
+        >
+      </p>
     </section>
-    
+
     <footer>
-      <p>&copy; J.K. Rowling. Harry Potter and the Philosopher's Stone. London: Bloomsbury Publishing, 1997.</p>
+      <p>
+        &copy; J.K. Rowling. Harry Potter and the Philosopher's Stone. London:
+        Bloomsbury Publishing, 1997.
+      </p>
     </footer>
   </body>
 </html>
