@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <link rel="icon" type="image/png" href="./images/icon.png" />
     <script type="text/javascript" src="./scripts/info.js" ></script>
+    <script type="text/javascript" src="./scripts/menu.js" ></script>
 
   </head>
   <body>
@@ -20,9 +21,7 @@
       
       
       <form>
-        <select id="elementSelectionMenu" onchange="change">
-          <option value="body">body</option>
-        </select>
+        <select id="elementSelectionMenu" onchange="change"></select>
       </form>
     
       <div id="myModal" class="modal">
@@ -31,15 +30,13 @@
           <span class="close-modal">&times;</span> <!-- button to close window -->
           <!-- HIER MOET EEN MENU KOMEN GECONDOLEERD ALVAST-->
           
-          <form>
-            Font size:<br><input type="number" name="change-font-size"><br>
-            Color:<br><input type="number" name="change-color"><br><br>
+          <form id="menu-two">
+            Font size:<br><input type="number" id="change-font-size"><br>
+            Color:<br><input type="number" id="change-color"> (RGB value, for example 255255255) <br><br>
             <input type="button" onclick="menuApplyNewSettings()" value="Apply">
           </form>
           
-          
           <p id="selected-element"></p>
-        
         </div>
       </div>
       
